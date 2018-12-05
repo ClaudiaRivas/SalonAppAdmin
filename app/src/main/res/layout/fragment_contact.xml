@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.ContactFragment"
+    android:id="@+id/frmContact">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_margin="5dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:text="Información"
+                    android:textStyle="bold"
+                    android:textColor="@color/primaryColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="5dp"/>
+                <TextView
+                    android:id="@+id/txtinformacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primaryLightColor"
+                    android:text="El Salon M-N es considerado "
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:text="Horarios de Atención"
+                    android:textStyle="bold"
+                    android:textColor="@color/primaryColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="5dp"/>
+                <TextView
+                    android:id="@+id/txtHorarioLunes_Viernes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primaryLightColor"
+                    android:text="Lunes a Viernes: "
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/txtHorarioSabado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primaryLightColor"
+                    android:text="Sábado: "
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/txtHorarioDomingo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primaryLightColor"
+                    android:text="Domingo: "
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:text="Dirección"
+                    android:textColor="@color/primaryColor"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="5dp"/>
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/txtdireccion"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/primaryLightColor"
+                    android:layout_height="wrap_content"
+                    android:text="Direccion"
+                    android:textSize="18sp"/>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_map" />
+                    <TextView
+                        android:id="@+id/txtAbrirMapa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ir al mapa"
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="10dp" />
+            </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardViewWhatsapp"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_margin="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_whatsapp" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="WhatsApp"
+                        android:textColor="@color/primaryColor"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/txtWhatsapp"
+                        android:textColor="@android:color/holo_green_dark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="(+503) 2450 - 2632"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="10dp"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardViewFacebook"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_margin="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_facebook" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primaryColor"
+                        android:text="Facebook"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/txtFacebook"
+                        android:textColor="@android:color/holo_green_dark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="M_N Salon Sonsonate"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="10dp"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardViewInstagram"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_margin="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_instagram" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Instagram"
+                        android:textColor="@color/primaryColor"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/txtInstagram"
+                        android:textColor="@android:color/holo_green_dark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="mili de escobar"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="10dp"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_margin="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aplicación creada por:"
+                android:textStyle="bold"
+                android:textColor="@color/primaryColor"
+                android:textSize="18sp"
+                android:padding="5dp"
+                android:textAlignment="center"/>
+            <TextView
+                android:id="@+id/txtIntegrante1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="Ana Ivonne Rodríguez Guerra"
+                android:textColor="@color/primaryLightColor"
+                android:textSize="16sp"
+                android:textAlignment="center"/>
+            <TextView
+                android:id="@+id/txtIntegrante2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Claudia del Carmen Rivas Rivas"
+                android:textColor="@color/primaryLightColor"
+                android:textSize="16sp"
+                android:textAlignment="center"/>
+            <TextView
+                android:id="@+id/txtIntegrante3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fátima Guadalupe Martínez Amaya"
+                android:textColor="@color/primaryLightColor"
+                android:textSize="16sp"
+                android:textAlignment="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contacto:"
+                android:textStyle="bold"
+                android:textColor="@color/primaryColor"
+                android:textSize="18sp"
+                android:padding="5dp"
+                android:textAlignment="center"/>
+            <TextView
+                android:id="@+id/txtCorreoIntegrante"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryLightColor"
+                android:text="rivas.29rivas05@gmail.com"
+                android:textSize="16sp"
+                android:textAlignment="center"/>
+        </LinearLayout>
+
+        </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>

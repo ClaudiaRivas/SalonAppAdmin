@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.DetailsFragment">
+
+    <android.support.v7.widget.CardView
+        android:layout_margin="5dp"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/textDetalleTitulo"
+                android:text="Información"
+                android:textColor="@color/primaryColor"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:layout_marginBottom="5dp"/>
+            <ImageView
+                android:src="@drawable/service3"
+                android:layout_margin="5dp"
+                android:id="@+id/imgDetalleItem"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:scaleType="fitCenter" />
+            <TextView
+                android:id="@+id/textDetalleNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryColor"
+                android:text="informacion"
+                android:gravity="center"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/textDetalleDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryLightColor"
+                android:text="informacion"
+                android:gravity="center"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/textDetallePrecio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_green_dark"
+                android:text="informacion"
+                android:gravity="center"
+                android:textSize="18sp"/>
+            <Button
+                android:id="@+id/btnReservar"
+                android:layout_width="164dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Reservar"
+                android:textSize="16sp"
+                android:background="@drawable/button_fondo"
+                android:textColor="@drawable/button_texto"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

@@ -2,5 +2,17 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#ffffff</color>
+    <color name="Rose">#E52A6F</color>
+    <color name="Jewel">#5F0F4E</color>
+    <color name="Amethyst">#675682</color>
+    <color name="BlueTopaz">#67AECA</color>
+    <color name="Silver">#efe7fa</color>
+    <color name="white">#d9b6fa</color>
+
+    <color name="primaryColor">#8e24aa</color>
+    <color name="primaryLightColor">#c158dc</color>
+    <color name="primaryDarkColor">#5c007a</color>
+    <color name="primaryTextColor">#ffffff</color>
+
 </resources>

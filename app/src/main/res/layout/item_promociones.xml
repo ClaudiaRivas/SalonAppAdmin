@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/itemPromociones">
+
+    <ImageView
+        android:id="@+id/ImagenPromociones"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:paddingTop="5dp"
+        app:srcCompat="@drawable/promo" />
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:id="@+id/TxtTema"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/ImagenPromociones"
+        android:paddingTop="5dp"
+        android:text="Nombre"
+        android:textColor="@color/primaryColor"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:id="@+id/TxtSubtema"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_toRightOf="@+id/ImagenPromociones"
+        android:paddingLeft="1dp"
+        android:textColor="@color/primaryLightColor"
+        android:paddingRight="1dp"
+        android:paddingTop="5dp"
+        android:text="Descripcion"
+        android:textAlignment="center"
+        android:textSize="16sp" />
+    <TextView
+        android:layout_toRightOf="@id/ImagenPromociones"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:id="@+id/TextPrecio"
+        android:textColor="@android:color/holo_green_dark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:text="Precio"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:layout_marginBottom="5dp" />
+
+</RelativeLayout>
