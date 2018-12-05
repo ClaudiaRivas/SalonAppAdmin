@@ -1,0 +1,104 @@
+{
+  "project_info": {
+    "project_number": "741409305461",
+    "firebase_url": "https://salon-rivas.firebaseio.com",
+    "project_id": "salon-rivas",
+    "storage_bucket": "salon-rivas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:741409305461:android:736bbc405456f8dd",
+        "android_client_info": {
+          "package_name": "com.example.rivas.salon_rmr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "741409305461-966t2bcckv77961fngq6id34i6dlfv5t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBC7m2D5Hn6T9KZhqDosJQxHMtaSVfvsqg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:741409305461:android:92ceeb981d26329d",
+        "android_client_info": {
+          "package_name": "com.example.rivas.salonadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "741409305461-966t2bcckv77961fngq6id34i6dlfv5t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBC7m2D5Hn6T9KZhqDosJQxHMtaSVfvsqg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:741409305461:android:7ecd99c469d3cb83",
+        "android_client_info": {
+          "package_name": "com.example.rivas.salonappadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "741409305461-966t2bcckv77961fngq6id34i6dlfv5t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBC7m2D5Hn6T9KZhqDosJQxHMtaSVfvsqg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
