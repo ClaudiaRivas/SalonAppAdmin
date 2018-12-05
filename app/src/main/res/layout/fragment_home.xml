@@ -4,20 +4,19 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/frm_home">
-    <android.support.design.widget.AppBarLayout
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent">
-
-        <com.smarteist.autoimageslider.SliderLayout
-            android:id="@+id/imageSwitcher"
-            android:layout_width="match_parent"
-            android:layout_height="220dp" />
-
-    </android.support.design.widget.AppBarLayout>
     <ListView
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:id="@+id/listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btnAddPromocion"
+        android:src="@drawable/ic_add"
+        android:layout_gravity="bottom|end"
+        android:tint="@color/primaryColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp" />
 
 </android.support.design.widget.CoordinatorLayout>

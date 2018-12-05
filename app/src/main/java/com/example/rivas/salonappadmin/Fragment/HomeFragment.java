@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,23 +24,21 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FirebaseStorage;
-import com.smarteist.autoimageslider.SliderLayout;
-import com.smarteist.autoimageslider.SliderView;
 
 import java.util.List;
 
 public class HomeFragment extends FragmentConsultaFirebase {
 
     View view;
-
-    SliderLayout sliderLayout;
-
-    private int[] galeria = {R.drawable.p, R.drawable.p1, R.drawable.p2, R.drawable.p4};
-
     //firebase
     CollectionReference dbPromociones;
     //adaptador
     AdaptadorPromocion adaptadorPromocion;
+
+    FloatingActionButton btnAddPromocion;
+
+    private final String ruta_db  = "promociones";
+    private final String ruta_img = "img_promociones";
 
     public HomeFragment(){
 
@@ -51,11 +50,11 @@ public class HomeFragment extends FragmentConsultaFirebase {
         view = inflater.inflate(R.layout.fragment_home,container,false);
 
        //instancia al listview
-        ListView listView = (ListView) view.findViewById(R.id.listview);
+        ListView listView   = (ListView) view.findViewById(R.id.listview);
+        btnAddPromocion     = view.findViewById(R.id.btnAddPromocion);
         //hacer instancia a la bd en firebase
-        dbPromociones = FirebaseFirestore.getInstance().collection("promociones");
-
-        imgFirebase   = FirebaseStorage.getInstance().getReference("img_promociones");
+        dbPromociones = FirebaseFirestore.getInstance().collection(ruta_db);
+        imgFirebase   = FirebaseStorage.getInstance().getReference(ruta_img);
 
         //crear adaptador
         adaptadorPromocion = new AdaptadorPromocion(getContext(),listaItems);
@@ -68,10 +67,13 @@ public class HomeFragment extends FragmentConsultaFirebase {
                 actualizarDatos(queryDocumentSnapshots.getDocumentChanges());
             }
         });
-        //para slider de imagenes
-        sliderLayout =  view.findViewById(R.id.imageSwitcher);
-        setSliderViews();
 
+        btnAddPromocion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                agregarPromocion();
+            }
+        });
         /** a la lista agregar el evento on click*/
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -87,42 +89,36 @@ public class HomeFragment extends FragmentConsultaFirebase {
         if (mFragmentNavigation != null) {
             DetailsFragment mFragment = new DetailsFragment();
             mFragment.setItem( listaItems.get(i) );
+            mFragment.setTitulo("Promoción");
+            mFragment.setRuta_db(ruta_db);
+            mFragment.setRuta_img(ruta_img);
             mFragmentNavigation.pushFragment(mFragment);
         }
     }
-
+    private void agregarPromocion(){
+        if (mFragmentNavigation != null) {
+            EditFragment mFragment = new EditFragment();
+            mFragment.setRuta_db(ruta_db);
+            mFragment.setRuta_img(ruta_img);
+            mFragment.setTitulo("Agregar Promoción");
+            mFragmentNavigation.pushFragment(mFragment);
+        }
+    }
     @Override
     protected void actualizarDatos(List<DocumentChange> cambios) {
         super.actualizarDatos(cambios);
         adaptadorPromocion.notifyDataSetChanged();
     }
-
-    private void setSliderViews() {
-        for (int i = 0; i < galeria.length; i++) {
-            //crear un elemento para el slider
-            SliderView sliderView = new SliderView(getContext());
-            //establecer la imagen
-            sliderView.setImageDrawable(galeria[i]);
-            //agregar el slider
-            sliderView.setImageScaleType(ImageView.ScaleType.FIT_XY);
-            sliderLayout.addSliderView(sliderView);
-        }
-    }
-
-
     @Override
     protected void updateAdapterImage(int index) {
         super.updateAdapterImage(index);
         adaptadorPromocion.notifyDataSetChanged();
     }
-
     // Hacemos el metodo AdaptadorServicio
     private class AdaptadorPromocion extends ArrayAdapter<Item> {
-
         public AdaptadorPromocion(@NonNull Context context, @NonNull List<Item> objects) {
             super(context, 0, objects);
         }
-
         @NonNull
         @Override
         public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {

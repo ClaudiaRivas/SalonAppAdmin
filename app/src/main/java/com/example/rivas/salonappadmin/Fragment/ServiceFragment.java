@@ -3,6 +3,7 @@ package com.example.rivas.salonappadmin.Fragment;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -27,6 +28,9 @@ public class ServiceFragment extends FragmentConsultaFirebase {
 
     //firebase
     CollectionReference dbServicio;
+    FloatingActionButton btnAddServicio;
+    private final String ruta_db = "servicios";
+    private final String ruta_img = "img_servicios";
 
     @Nullable
     @Override
@@ -34,6 +38,7 @@ public class ServiceFragment extends FragmentConsultaFirebase {
             Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_service, container, false);
 
+        btnAddServicio  = view.findViewById(R.id.btnAddServicio);
 
         //instancia al listview
         RecyclerView list = (RecyclerView) view.findViewById(R.id.listaServicios);
@@ -49,8 +54,8 @@ public class ServiceFragment extends FragmentConsultaFirebase {
 
 
         if(dbServicio==null){
-            dbServicio  = FirebaseFirestore.getInstance().collection("servicios");
-            imgFirebase = FirebaseStorage.getInstance().getReference("img_servicios");
+            dbServicio  = FirebaseFirestore.getInstance().collection(ruta_db);
+            imgFirebase = FirebaseStorage.getInstance().getReference(ruta_img);
 
             dbServicio.addSnapshotListener(new EventListener<QuerySnapshot>() {
                 @Override
@@ -61,13 +66,18 @@ public class ServiceFragment extends FragmentConsultaFirebase {
         }
 
 
+        btnAddServicio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                agregarServicio();
+            }
+        });
+
         //establecer el adaptador a la listview
         list.setAdapter(adaptadorItems);
         /**
          * Registra cambios en la bd mediante el evento Document Changed
          */
-
-
         ItemClickSupport.addTo(list).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
             @Override
             public void onItemClicked(RecyclerView recyclerView, int position, View v) {
@@ -77,10 +87,23 @@ public class ServiceFragment extends FragmentConsultaFirebase {
         return view;
     }
 
+    private void agregarServicio() {
+        if (mFragmentNavigation != null) {
+            EditFragment mFragment = new EditFragment();
+            mFragment.setRuta_db(ruta_db);
+            mFragment.setRuta_img(ruta_img);
+            mFragment.setTitulo("Agregar Servicio");
+            mFragmentNavigation.pushFragment(mFragment);
+        }
+    }
+
     private void cargarFragmento(int i){
         if (mFragmentNavigation != null) {
             DetailsFragment mFragment = new DetailsFragment();
             mFragment.setItem( listaItems.get(i) );
+            mFragment.setTitulo("Servicio");
+            mFragment.setRuta_db(ruta_db);
+            mFragment.setRuta_img(ruta_img);
             mFragmentNavigation.pushFragment(mFragment);
         }
     }

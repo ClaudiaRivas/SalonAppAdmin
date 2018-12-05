@@ -3,6 +3,7 @@ package com.example.rivas.salonappadmin.Fragment;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -33,6 +34,7 @@ public class FragmentProductoGenerico extends FragmentConsultaFirebase {
     private String referencia;
     private String titulo;
     private String rutaImg;
+    private FloatingActionButton btnAddProducto;
 
     public void setReferencia(String referencia) {
         this.referencia = referencia;
@@ -52,7 +54,8 @@ public class FragmentProductoGenerico extends FragmentConsultaFirebase {
         //inflar el layout
         View view = inflater.inflate(R.layout.fragment_producto_generico, container, false);
 
-        TextView txtTitulo = (TextView) view.findViewById(R.id.txtTituloProductoGenerico);
+        TextView txtTitulo  = (TextView) view.findViewById(R.id.txtTituloProductoGenerico);
+        btnAddProducto      = view.findViewById(R.id.btnAddProducto);
 
         if(titulo!=null){
             txtTitulo.setText(titulo);
@@ -87,6 +90,12 @@ public class FragmentProductoGenerico extends FragmentConsultaFirebase {
                 }
             });
         }
+        btnAddProducto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                agregarProducto();
+            }
+        });
 
         ItemClickSupport.addTo(recycler).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
             @Override
@@ -94,7 +103,6 @@ public class FragmentProductoGenerico extends FragmentConsultaFirebase {
                 cargarFragmento(position);
             }
         });
-
         return view;
     }
 
@@ -102,6 +110,19 @@ public class FragmentProductoGenerico extends FragmentConsultaFirebase {
         if (mFragmentNavigation != null) {
             DetailsFragment mFragment = new DetailsFragment();
             mFragment.setItem( listaItems.get(i) );
+            mFragment.setTitulo("Producto");
+            mFragment.setRuta_db(referencia);
+            mFragment.setRuta_img(rutaImg);
+            mFragmentNavigation.pushFragment(mFragment);
+        }
+    }
+
+    private void agregarProducto(){
+        if (mFragmentNavigation != null) {
+            EditFragment mFragment = new EditFragment();
+            mFragment.setRuta_db(referencia);
+            mFragment.setRuta_img(rutaImg);
+            mFragment.setTitulo("Agregar Producto");
             mFragmentNavigation.pushFragment(mFragment);
         }
     }
