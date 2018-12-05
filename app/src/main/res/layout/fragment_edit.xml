@@ -44,39 +44,50 @@
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
+                android:layout_margin="6dp"
                 android:layout_height="wrap_content">
                 <Button
                     android:id="@+id/btnEditRotarImg"
-                    android:text="rotar"
+                    android:text=" rotar "
+                    android:background="@drawable/button_fondo"
+                    android:textColor="@drawable/button_texto"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <Button
                     android:id="@+id/btnEditCambiarImg"
-                    android:text="cambiar"
+                    android:text="  cambiar  "
+                    android:background="@drawable/button_fondo"
+                    android:textColor="@drawable/button_texto"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+
                 <Button
                     android:id="@+id/btnEditEliminarImg"
-                    android:text="eliminar"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_fondo"
+                    android:text="  eliminar  "
+                    android:textColor="@drawable/button_texto" />
             </LinearLayout>
 
             <EditText
                 android:id="@+id/txtEditNombre"
                 android:hint="Nombre"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryLightColor"/>
             <EditText
                 android:id="@+id/txtEditDescripcion"
                 android:hint="Descripción"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryLightColor"/>
             <EditText
                 android:id="@+id/txtEditPrecio"
                 android:hint="Precio"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_green_dark"/>
             <RelativeLayout
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
@@ -85,13 +96,17 @@
                 <Button
                     android:id="@+id/btnEditCancelar"
                     android:layout_alignParentLeft="true"
-                    android:text="Cancelar"
+                    android:text="  Cancelar  "
+                    android:background="@drawable/button_fondo"
+                    android:textColor="@drawable/button_texto"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <Button
                     android:id="@+id/btnEditGuardar"
                     android:layout_alignParentRight="true"
-                    android:text="Guardar"
+                    android:text="  Guardar  "
+                    android:background="@drawable/button_fondo"
+                    android:textColor="@drawable/button_texto"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </RelativeLayout>
