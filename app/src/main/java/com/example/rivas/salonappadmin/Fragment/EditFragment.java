@@ -145,6 +145,7 @@ public class EditFragment extends BaseFragment {
             txtPrecio.setText(item.getPrecio());
             if(item.getImgItem()!=null){
                 imgItem.setImageBitmap(item.getImgItem());
+                bitmapItem = item.getImgItem();
             }
         }
         if(ruta_db!=null & ruta_img!=null){

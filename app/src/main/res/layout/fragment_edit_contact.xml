@@ -39,8 +39,8 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/primaryLightColor"
                         android:hint="El Salon M&amp;N es considerado..."
-                        android:lines="4"
-                        android:textSize="18sp"/>
+                        android:lines="5"
+                        android:textSize="16sp"/>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
