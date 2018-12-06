@@ -46,7 +46,15 @@ dependencies {
     //para menejo de varios fragmentos
     implementation 'com.ncapdevi:frag-nav:2.0.2'
     implementation 'org.jetbrains:annotations-java5:15.0'
+    //para mapa
     implementation 'com.google.android.gms:play-services-maps:16.0.0'
+    //enviar notificaciones
+    implementation 'com.github.DavidBarbaran:FCM-AndroidToOtherDevice:1.0'
+}
+
+configurations {
+    cleanedAnnotations
+    compile.exclude group: 'org.jetbrains' , module:'annotations'
 }
 
 apply plugin: 'com.google.gms.google-services'

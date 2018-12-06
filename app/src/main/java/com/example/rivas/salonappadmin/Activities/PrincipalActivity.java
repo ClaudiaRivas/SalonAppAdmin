@@ -34,7 +34,7 @@ public class PrincipalActivity extends AppCompatActivity implements BaseFragment
     private final int INDEX_SERVICES    = FragNavController.TAB3;
     private final int INDEX_CONTACT     = FragNavController.TAB4;
 
-    private FragNavController mNavController;
+    public static FragNavController mNavController;
 
     private static HomeFragment frm1 = new HomeFragment();
     private static ProductFragment  frm2 = new ProductFragment();

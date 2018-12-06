@@ -56,17 +56,21 @@ public class HomeFragment extends FragmentConsultaFirebase {
         dbPromociones = FirebaseFirestore.getInstance().collection(ruta_db);
         imgFirebase   = FirebaseStorage.getInstance().getReference(ruta_img);
 
-        //crear adaptador
-        adaptadorPromocion = new AdaptadorPromocion(getContext(),listaItems);
+
+        if(adaptadorPromocion==null) {
+            adaptadorPromocion = new AdaptadorPromocion(getContext(), listaItems);
+
+            dbPromociones.addSnapshotListener(new EventListener<QuerySnapshot>() {
+                @Override
+                public void onEvent(@javax.annotation.Nullable QuerySnapshot queryDocumentSnapshots, @javax.annotation.Nullable FirebaseFirestoreException e) {
+                    actualizarDatos(queryDocumentSnapshots.getDocumentChanges());
+                }
+            });
+        }
+
         //establecer el adaptador a la listview
         listView.setAdapter(adaptadorPromocion);
 
-        dbPromociones.addSnapshotListener(new EventListener<QuerySnapshot>() {
-            @Override
-            public void onEvent(@javax.annotation.Nullable QuerySnapshot queryDocumentSnapshots, @javax.annotation.Nullable FirebaseFirestoreException e) {
-                actualizarDatos(queryDocumentSnapshots.getDocumentChanges());
-            }
-        });
 
         btnAddPromocion.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -132,6 +136,8 @@ public class HomeFragment extends FragmentConsultaFirebase {
 
             if(item.getImgItem()!=null){
                 imageView.setImageBitmap(item.getImgItem());
+            }else{
+                imageView.setImageResource(R.drawable.promo);
             }
 
             TextView TemaTxt = (TextView) itemView.findViewById(R.id.TxtTema);

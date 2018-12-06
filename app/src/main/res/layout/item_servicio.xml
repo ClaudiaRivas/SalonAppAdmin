@@ -39,7 +39,7 @@
                     android:layout_marginTop="5dp"
                     android:paddingTop="5dp"
                     android:text="Nombre"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
                 <TextView
                     android:textColor="@color/primaryLightColor"
@@ -52,7 +52,7 @@
                     android:layout_marginTop="5dp"
                     android:paddingTop="5dp"
                     android:text="Descripcion"
-                    android:textSize="16sp"  />
+                    android:textSize="14sp"  />
                 <TextView
                     android:textColor="@android:color/holo_green_dark"
                     android:layout_weight="1"
@@ -62,7 +62,7 @@
                     android:layout_marginTop="5dp"
                     android:paddingTop="5dp"
                     android:text="Precio"
-                    android:textSize="18sp"/>
+                    android:textSize="16sp"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
