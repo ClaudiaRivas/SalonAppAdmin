@@ -378,9 +378,9 @@ public class EditFragment extends BaseFragment {
         contenido = contenido.replaceAll("Promoción","Promocione");
 
         if(contenido.contains("Producto")){
-            contenido+="s actualizadas, Miralas ahora!";
-        }else{
             contenido+="s actualizados, Miralos ahora!";
+        }else{
+            contenido+="s actualizadas, Miralas ahora!";
         }
 
         FirebasePush firebasePush = new FirebasePush("AIzaSyBJz_QHlWmyXf0QAybSR1EHfdUzyo5d5UE");
