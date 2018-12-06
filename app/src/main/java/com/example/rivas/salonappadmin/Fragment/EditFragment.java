@@ -218,6 +218,12 @@ public class EditFragment extends BaseFragment {
 
     private void prepararSubidaProducto(){
         if(camposValido()) {
+
+            Snackbar snackbar = Snackbar
+                    .make(layoutContact, "Guardando...", Snackbar.LENGTH_SHORT);
+            snackbar.show();
+
+
             DocumentReference referenciaProducto;
 
             String nombre = txtNombre.getText().toString();
@@ -308,6 +314,7 @@ public class EditFragment extends BaseFragment {
     }
 
     private void guardarDatos(final DocumentReference referencia, final HashMap<String,Object> datos, final boolean cerrar){
+
         referencia.set(datos,SetOptions.merge())
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
