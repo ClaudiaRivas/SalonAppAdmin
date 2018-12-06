@@ -218,7 +218,7 @@ public class EditFragment extends BaseFragment {
 
             String nombre = txtNombre.getText().toString();
             String precio = txtPrecio.getText().toString();
-            String desc   = txtNombre.getText().toString();
+            String desc   = txtDesc.getText().toString();
 
             HashMap<String,Object> productoBD = new HashMap<>();
             productoBD.put("nombre",nombre);
@@ -372,8 +372,16 @@ public class EditFragment extends BaseFragment {
         return dateToStr;
     }
 
-
     private void notificacion(){
+        String contenido = titulo.replaceAll("Editar","");
+        contenido = contenido.replaceAll("Agregar","");
+        contenido = contenido.replaceAll("Promoción","Promocione");
+
+        if(contenido.contains("Producto")){
+            contenido+="s actualizadas, Miralas ahora!";
+        }else{
+            contenido+="s actualizados, Miralos ahora!";
+        }
 
         FirebasePush firebasePush = new FirebasePush("AIzaSyBJz_QHlWmyXf0QAybSR1EHfdUzyo5d5UE");
 
@@ -383,7 +391,7 @@ public class EditFragment extends BaseFragment {
                 Log.e("NOTIFICACION", ouput);
             }
         });
-        firebasePush.setNotification(new Notification("Salón M&N","Productos actualizados miralos ahora!"));
+        firebasePush.setNotification(new Notification("Salón M&N",contenido));
         firebasePush.sendToTopic("salon");
     }
 
