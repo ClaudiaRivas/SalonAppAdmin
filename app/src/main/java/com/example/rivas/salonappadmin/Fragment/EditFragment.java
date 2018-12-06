@@ -190,6 +190,8 @@ public class EditFragment extends BaseFragment {
             }
         });
 
+
+
         return view;
     }
 

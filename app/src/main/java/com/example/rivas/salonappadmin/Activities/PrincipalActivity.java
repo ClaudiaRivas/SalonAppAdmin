@@ -56,6 +56,7 @@ public class PrincipalActivity extends AppCompatActivity implements BaseFragment
 
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
+
         //para manejo de fragmentos
         mNavController = FragNavController.newBuilder(savedInstanceState, getSupportFragmentManager(), R.id.container)
                 .transactionListener(this)
