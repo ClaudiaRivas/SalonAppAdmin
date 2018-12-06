@@ -14,6 +14,7 @@ import android.util.Log;
 
 
 import com.example.rivas.salonappadmin.Activities.MainActivity;
+import com.example.rivas.salonappadmin.Activities.PrincipalActivity;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
@@ -34,7 +35,7 @@ public class NotificacionFirebase extends FirebaseMessagingService {
         }
     }
     private void sendNotification(String title,String messageBody) {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, PrincipalActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0 /* Request code */, intent,
                 PendingIntent.FLAG_ONE_SHOT);

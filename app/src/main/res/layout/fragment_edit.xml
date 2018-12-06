@@ -102,6 +102,7 @@
                     android:textColor="@drawable/button_texto"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+
                 <Button
                     android:id="@+id/btnEditGuardar"
                     android:layout_alignParentRight="true"

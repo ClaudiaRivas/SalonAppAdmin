@@ -14,7 +14,7 @@ public class FirebaseInstancia extends FirebaseInstanceIdService {
     public void onTokenRefresh() {
         super.onTokenRefresh();
         String token = FirebaseInstanceId.getInstance().getToken();
-        FirebaseMessaging.getInstance().subscribeToTopic("salon");
+        FirebaseMessaging.getInstance().subscribeToTopic("admin_salon");
         Log.d(TAG, "onTokenRefresh: "+token);
     }
 }

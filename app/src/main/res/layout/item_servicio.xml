@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
-                android:src="@drawable/service2"
+                android:src="@drawable/ic_hair_logo"
                 android:layout_margin="5dp"
                 android:id="@+id/imgServicioItem"
                 android:layout_width="120dp"
@@ -39,8 +39,8 @@
                     android:layout_marginTop="5dp"
                     android:paddingTop="5dp"
                     android:text="Nombre"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    style="@android:style/TextAppearance.Medium" />
                 <TextView
                     android:textColor="@color/primaryLightColor"
                     android:layout_weight="1"
@@ -52,7 +52,8 @@
                     android:layout_marginTop="5dp"
                     android:paddingTop="5dp"
                     android:text="Descripcion"
-                    android:textSize="14sp"  />
+                    style="@android:style/TextAppearance.Small"
+                    />
                 <TextView
                     android:textColor="@android:color/holo_green_dark"
                     android:layout_weight="1"
@@ -62,7 +63,8 @@
                     android:layout_marginTop="5dp"
                     android:paddingTop="5dp"
                     android:text="Precio"
-                    android:textSize="16sp"/>
+                    style="@android:style/TextAppearance.Medium"
+                    />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

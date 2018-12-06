@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
@@ -45,6 +46,7 @@ public class ContactFragment extends BaseFragment {
     DocumentReference mDocRef = FirebaseFirestore.getInstance().document("informacion/contacto");
     TextView txtHorarioLunes_Viernes,txtHorarioSabado,txtWhatsapp, txtinformacion,txtFacebook,txtInstagram, txtHorarioDomingo, txtIntegrante1, txtIntegrante2, txtIntegrante3,txtCorreoIntegrante,txtdireccion,txtAbrirMapa;
     CardView cardViewWhatsapp,cardViewFacebook,cardViewInstagram;
+    FloatingActionButton btnEditContact;
 
     private static final int REQUEST_ID_MULTIPLE_PERMISSIONS = 1;
 
@@ -82,6 +84,16 @@ public class ContactFragment extends BaseFragment {
         cardViewWhatsapp        = (CardView)view.findViewById(R.id.cardViewWhatsapp);
         cardViewFacebook        = (CardView)view.findViewById(R.id.cardViewFacebook);
         cardViewInstagram       = (CardView)view.findViewById(R.id.cardViewInstagram);
+
+
+        btnEditContact          = view.findViewById(R.id.btnEditContact);
+
+        btnEditContact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                editarInfo();
+            }
+        });
 
         cardViewWhatsapp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -157,18 +169,35 @@ public class ContactFragment extends BaseFragment {
         }
     }
 
+    private void editarInfo(){
+        if (mFragmentNavigation != null) {
+            EditContactFragment mFragment = new EditContactFragment();
+            mFragment.setInfo(
+                    txtinformacion.getText().toString(),
+                    txtHorarioLunes_Viernes.getText().toString(),
+                    txtHorarioSabado.getText().toString(),
+                    txtHorarioDomingo.getText().toString(),
+                    txtdireccion.getText().toString(),
+                    txtWhatsapp.getText().toString(),
+                    txtFacebook.getText().toString(),
+                    txtInstagram.getText().toString()
+            );
+            mFragmentNavigation.pushFragment(mFragment);
+        }
+    }
+
     private void actualizar(DocumentSnapshot doc){
-        txtHorarioLunes_Viernes.setText( "Lunes a viernes : "+doc.getString("horarios_lunes_viernes")  );
-        txtHorarioSabado.setText( "Sábado : "+ doc.getString("horarios_sabado")  );
-        txtHorarioDomingo.setText( "Domingo : "+ doc.getString("horarios_domingo")  );
+        txtHorarioLunes_Viernes.setText(doc.getString("horarios_lunes_viernes")  );
+        txtHorarioSabado.setText(doc.getString("horarios_sabado")  );
+        txtHorarioDomingo.setText(doc.getString("horarios_domingo")  );
         txtWhatsapp.setText( doc.getString("whatsapp")  );
         txtFacebook.setText( doc.getString("facebook")  );
         txtInstagram.setText( doc.getString("instagram")  );
-        txtIntegrante1.setText( doc.getString("integrante1")  );
-        txtIntegrante2.setText( doc.getString("integrante2")  );
-        txtIntegrante3.setText( doc.getString("integrante3")  );
+        //txtIntegrante1.setText( doc.getString("integrante1")  );
+        //txtIntegrante2.setText( doc.getString("integrante2")  );
+        //txtIntegrante3.setText( doc.getString("integrante3")  );
         txtdireccion.setText( doc.getString("direccion")  );
-        txtCorreoIntegrante.setText( doc.getString("correo_integrante")  );
+        //txtCorreoIntegrante.setText( doc.getString("correo_integrante")  );
         txtinformacion.setText( doc.getString("informacion_salon")  );
     }
 

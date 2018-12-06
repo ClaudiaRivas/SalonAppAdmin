@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.EditContactFragment"
+    android:id="@+id/frmEditContact">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:text="Información"
+                        android:textStyle="bold"
+                        android:textColor="@color/primaryColor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:layout_marginBottom="5dp"/>
+                    <EditText
+                        android:id="@+id/txtEditInformacion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primaryLightColor"
+                        android:hint="El Salon M&amp;N es considerado..."
+                        android:lines="4"
+                        android:textSize="18sp"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+
+            <android.support.v7.widget.CardView
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:text="Horarios de atención"
+                        android:textStyle="bold"
+                        android:textColor="@color/primaryColor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:layout_marginBottom="5dp"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textSize="16sp"
+                            android:textColor="@color/primaryColor"
+                            android:text="Lunes a viernes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <EditText
+                            android:id="@+id/txtEditLunesViernes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/primaryLightColor"
+                            android:hint="Lunes a viernes 8:00 AM - 6:00 PM"
+                            android:textSize="18sp"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textSize="16sp"
+                            android:textColor="@color/primaryColor"
+                            android:text="Sabado"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <EditText
+                            android:id="@+id/txtEditSabado"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/primaryLightColor"
+                            android:hint="Sábado 8:00 AM - 3:00 PM"
+                            android:textSize="18sp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textSize="16sp"
+                            android:textColor="@color/primaryColor"
+                            android:text="Domingo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <EditText
+                            android:layout_marginBottom="5dp"
+                            android:id="@+id/txtEditDomingo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/primaryLightColor"
+                            android:hint="Domingo 8:00 AM - 12:00 MD"
+                            android:textSize="18sp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:text="Dirección"
+                        android:textStyle="bold"
+                        android:textColor="@color/primaryColor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:layout_marginBottom="5dp"/>
+                    <EditText
+                        android:id="@+id/txtEditDireccion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primaryLightColor"
+                        android:hint="Av.Morazán ...  Sonsonate, Departamento Sonsonate "
+                        android:lines="4"
+                        android:textSize="18sp"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+
+            <android.support.v7.widget.CardView
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:text="Contacto"
+                        android:textStyle="bold"
+                        android:textColor="@color/primaryColor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:layout_marginBottom="5dp"/>
+
+                    <LinearLayout
+                        android:layout_margin="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_whatsapp" />
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="WhatsApp"
+                                android:textColor="@color/primaryColor"
+                                android:textSize="18sp"
+                                android:layout_marginLeft="10dp"
+                                />
+                            <EditText
+                                android:id="@+id/txtEditWhatsapp"
+                                android:textColor="@android:color/holo_green_dark"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="(+503) 701234567"
+                                android:textSize="18sp"
+                                android:layout_marginLeft="10dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_margin="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_facebook" />
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="WhatsApp"
+                                android:textColor="@color/primaryColor"
+                                android:textSize="18sp"
+                                android:layout_marginLeft="10dp"
+                                />
+                            <EditText
+                                android:id="@+id/txtEditFacebook"
+                                android:textColor="@android:color/holo_green_dark"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="M&amp;N Salón Sonsonate"
+                                android:textSize="18sp"
+                                android:layout_marginLeft="10dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_margin="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_instagram" />
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="WhatsApp"
+                                android:textColor="@color/primaryColor"
+                                android:textSize="18sp"
+                                android:layout_marginLeft="10dp"
+                                />
+                            <EditText
+                                android:id="@+id/txtEditInstagram"
+                                android:textColor="@android:color/holo_green_dark"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="M&amp;N Salón Sonsonate"
+                                android:textSize="18sp"
+                                android:layout_marginLeft="10dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btnSaveContact"
+        android:src="@drawable/ic_save"
+        android:layout_gravity="bottom|end"
+        android:tint="@color/primaryColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp" />
+
+
+</android.support.design.widget.CoordinatorLayout>
