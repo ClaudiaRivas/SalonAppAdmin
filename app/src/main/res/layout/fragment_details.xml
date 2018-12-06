@@ -33,7 +33,7 @@
                 android:gravity="center"
                 android:layout_marginBottom="5dp"/>
             <ImageView
-                android:src="@drawable/ic_product"
+                app:srcCompat="@drawable/ic_product"
                 android:layout_margin="5dp"
                 android:id="@+id/imgDetalleItem"
                 android:layout_width="match_parent"

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/fragmentProduct">
@@ -37,9 +38,9 @@
 
                     <ImageView
                         android:layout_width="82dp"
-                        android:layout_height="85dp"
+                        android:layout_height="82dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/ic_cabello" />
+                        app:srcCompat="@drawable/ic_cabello" />
 
                     <TextView
                         android:layout_width="82dp"
@@ -47,7 +48,7 @@
                         android:text="Cabello"
                         android:textColor="@color/primaryColor"
                         android:gravity="center"
-                        android:textSize="15dp"
+                        android:textSize="12sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -71,16 +72,16 @@
 
                     <ImageView
                         android:layout_width="82dp"
-                        android:layout_height="85dp"
+                        android:layout_height="82dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/ic_nail_polish" />
+                        app:srcCompat="@drawable/ic_nail_polish" />
 
                     <TextView
                         android:layout_width="82dp"
                         android:layout_height="match_parent"
                         android:text="Uñas"
                         android:gravity="center"
-                        android:textSize="15dp"
+                        android:textSize="12sp"
                         android:textColor="@color/primaryColor"
                         android:textStyle="bold" />
 
@@ -117,9 +118,9 @@
 
                 <ImageView
                     android:layout_width="82dp"
-                    android:layout_height="85dp"
+                    android:layout_height="82dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_joyeria"/>
+                    app:srcCompat="@drawable/ic_joyeria"/>
 
                 <TextView
                     android:layout_width="82dp"
@@ -127,7 +128,7 @@
                     android:text="Joyeria"
                     android:gravity="center"
                     android:textColor="@color/primaryColor"
-                    android:textSize="15dp"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -151,15 +152,15 @@
 
                 <ImageView
                     android:layout_width="82dp"
-                    android:layout_height="85dp"
+                    android:layout_height="82dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_maquillaje" />
+                    app:srcCompat="@drawable/ic_maquillaje" />
 
                 <TextView
                     android:layout_width="82dp"
                     android:layout_height="match_parent"
                     android:textStyle="bold"
-                    android:textSize="14sp"
+                    android:textSize="12sp"
                     android:textColor="@color/primaryColor"
                     android:gravity="center"
                     android:text="Maquillaje"/>

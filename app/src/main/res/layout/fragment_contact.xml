@@ -186,7 +186,7 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/ic_whatsapp" />
+                    app:srcCompat="@drawable/ic_whatsapp" />
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
@@ -231,7 +231,7 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/ic_facebook" />
+                    app:srcCompat="@drawable/ic_facebook" />
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
@@ -275,7 +275,7 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/ic_instagram" />
+                    app:srcCompat="@drawable/ic_instagram" />
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
@@ -383,7 +383,7 @@
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/btnEditContact"
-        android:src="@drawable/ic_edit"
+        app:srcCompat="@drawable/ic_edit"
         android:layout_gravity="bottom|end"
         android:tint="@color/primaryColor"
         android:layout_width="wrap_content"
