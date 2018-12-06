@@ -402,7 +402,9 @@ public class EditFragment extends BaseFragment {
     private void limpiarImagen(){
         cambioImagen=true;
         bitmapItem=null;
-        item.setImgItem(null);
+        if(item!=null){
+            item.setImgItem(null);
+        }
         imgItem.setImageResource(R.drawable.ic_product);
         btnEliminarImg.setEnabled(false);
     }
